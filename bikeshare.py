@@ -7,6 +7,14 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'washington': 'washington.csv'}
 
 
+def pretty_print(text_to_print):
+    """Prints text with some decoration."""
+
+    print('=' * 80)
+    print(text_to_print)
+    print('=' * 80)
+
+
 def get_valid_answer(prompt, valid_answers):
     """
     Asks user to make a choice until they specify a valid option among the ones provided.
@@ -20,14 +28,12 @@ def get_valid_answer(prompt, valid_answers):
     """
 
     print()
-    answer = input(prompt)
-    answer = answer.strip().lower()
+    answer = input(prompt).strip().lower()
 
     while answer not in valid_answers:
         print('\nSorry, you chose an invalid option. Please try again.\n')
 
-        answer = input(prompt)
-        answer = answer.strip().lower()
+        answer = input(prompt).strip().lower()
     
     return answer
 
@@ -115,9 +121,7 @@ def get_filters():
     """
 
     print()
-    print('=' * 80)
-    print('Hello! Let\'s explore some US bikeshare data!')
-    print('=' * 80)
+    pretty_print('Hello! Let\'s explore some US bikeshare data!')
 
     # Get user input for city (Chicago, New York, or Washington)
     city = get_city_filter()
@@ -165,9 +169,7 @@ def load_data(city, month, day):
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
-    print('=' * 80)
-    print('Calculating The Most Frequent Times of Travel...')
-    print('=' * 80)
+    pretty_print('Calculating The Most Frequent Times of Travel...')
 
     start_time = time.time()
 
@@ -189,9 +191,7 @@ def time_stats(df):
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
-    print('=' * 80)
-    print('Calculating The Most Popular Stations and Trip...')
-    print('=' * 80)
+    pretty_print('Calculating The Most Popular Stations and Trip...')
 
     start_time = time.time()
 
@@ -213,9 +213,7 @@ def station_stats(df):
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
-    print('=' * 80)
-    print('Calculating Trip Duration...')
-    print('=' * 80)
+    pretty_print('Calculating Trip Duration...')
 
     start_time = time.time()
 
@@ -235,9 +233,7 @@ def trip_duration_stats(df):
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
-    print('=' * 80)
-    print('Calculating User Stats...')
-    print('=' * 80)
+    pretty_print('Calculating User Stats...')
 
     start_time = time.time()
 
@@ -282,9 +278,7 @@ def user_stats(df):
 def individual_trip_data(df, rows_per_time=5):
     """Asks if the user wants to see individual trip data and displays it if desired."""
 
-    print('=' * 80)
-    print('Individual trip data')
-    print('=' * 80)
+    pretty_print('Individual trip data')
 
     trip_data = get_valid_answer(
         prompt='Would you like to see individual trip data (Y/N)?\n>>> ',
@@ -329,9 +323,7 @@ def main():
         individual_trip_data(df, rows_per_time=5)
 
         print()
-        print('='*80)
-        print('You have reached the end of the program.')
-        print('='*80)
+        pretty_print('You have reached the end of the program.')
 
         restart = get_valid_answer(
             prompt='Would you like to restart the program (Y/N)?\n>>> ',
