@@ -22,6 +22,11 @@ All the files should be kept in the same directory.
 * Python 3.8 or later
 * `pandas`
 
+### Instructions
+* Make sure you have all the dataset and script files in the same directory.
+* In the command line, run `python bikeshare.py`
+* Follow the instructions in the terminal.
+
 ### Credits
 * [Udacity](https://www.udacity.com/), for providing a project template.
 * [`pandas` documentation](https://pandas.pydata.org/pandas-docs/version/1.5/index.html)
