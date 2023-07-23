@@ -20,14 +20,12 @@ def get_valid_answer(prompt, valid_answers):
     """
 
     print()
-    answer = input(prompt)
-    answer = answer.strip().lower()
+    answer = input(prompt).strip().lower()
 
     while answer not in valid_answers:
         print('\nSorry, you chose an invalid option. Please try again.\n')
 
-        answer = input(prompt)
-        answer = answer.strip().lower()
+        answer = input(prompt).strip().lower()
     
     return answer
 
