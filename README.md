@@ -18,6 +18,10 @@ Python script:
 
 All the files should be kept in the same directory.
 
+### Requirements
+* Python 3.8 or later
+* `pandas`
+
 ### Credits
 * [Udacity](https://www.udacity.com/), for providing a project template.
 * [`pandas` documentation](https://pandas.pydata.org/pandas-docs/version/1.5/index.html)
